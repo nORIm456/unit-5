@@ -25,40 +25,66 @@ float ax, ay;
 
 //score
 int points;
-int p1score = 0 ;
+int score = 0;
+int p1score = 0;
+int life = 3;
 
 //Keyboard
 boolean wKey, aKey, sKey, dKey, upKey, downKey, leftKey, rightKey;
+
+//Brick Variables
+int[] x;
+int[] y;
+
+
 void setup() {
   size(1000, 800, P2D);
-  
+
   x = 500;
   y = 700;
   d = 50;
   
-  //ball setup
-  ballx = width/2;
-  bally = height/2;
-  balld = 20;
+  //ballx = 500;
+  //bally = 400;
+  //balld = 20;
 
-  vx = -6;
-  vy = 8;
-  
-  
-}
-  
-  void draw() {
-  
-  if(mode == INTRO) {
-   intro();
-  }else if (mode == GAME) {
-    game();
-  }else if (mode == PAUSE) {
-    pause();
-  }else if ( mode == GAMEOVER) {
-    gameOver();
-  } else {
-    println("Error, mode is" + mode);
+  //ball setup
+ 
+    ballx = width/2;
+    bally = height/2;
+    balld = 20;
+
+    vx = -2;
+    vy = 8;
+    
+    
+    // set up array of bricks
+    x = new int[3];
+    y = new int[3];
+    
+    x[0] = 100;
+    y[0] = 100;
+    
+    x[1] = 500;
+    y[1] = 100;
+    
+    x[2] = 700;
+    y[2] = 100;
+    
   }
-}
-  
+
+
+  void draw() {
+
+    if (mode == INTRO) {
+      intro();
+    } else if (mode == GAME) {
+      game();
+    } else if (mode == PAUSE) {
+      pause();
+    } else if ( mode == GAMEOVER) {
+      gameOver();
+    } else {
+      println("Error, mode is" + mode);
+    }
+  }
