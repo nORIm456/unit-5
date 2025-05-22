@@ -16,7 +16,7 @@ color purple = #9A00D3;
 color nightsky = #354264;
 
 //Player
-float x, y, d, x2, y2, d2, x3, y3, d3, x4, y4, d4, x5, y5, d5;
+float px, py, d, x2, y2, d2, x3, y3, d3, x4, y4, d4, x5, y5, d5;
 
 //Ball
 float ballx, bally, balld;
@@ -40,8 +40,8 @@ int[] y;
 void setup() {
   size(1000, 800, P2D);
 
-  x = 500;
-  y = 700;
+  px = 500;
+  py = 700;
   d = 50;
   
   //ballx = 500;
@@ -62,14 +62,14 @@ void setup() {
     x = new int[3];
     y = new int[3];
     
-    x[0] = 100;
-    y[0] = 100;
+    x[0] = 300;
+    y[0] = 200;
     
     x[1] = 500;
-    y[1] = 100;
+    y[1] = 200;
     
     x[2] = 700;
-    y[2] = 100;
+    y[2] = 200;
     
   }
 
