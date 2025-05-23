@@ -35,10 +35,16 @@ boolean wKey, aKey, sKey, dKey, upKey, downKey, leftKey, rightKey;
 //Brick Variables
 int[] x;
 int[] y;
+boolean[] alive;
+int brickd;
+int n;
+int tempx, tempy;
 
 
 void setup() {
   size(1000, 800, P2D);
+  
+  
 
   px = 500;
   py = 700;
@@ -59,20 +65,25 @@ void setup() {
     
     
     // set up array of bricks
-    x = new int[3];
-    y = new int[3];
+    brickd = 50;
+    n = 28;
+    x = new int[n];
+    y = new int[n];
+    tempx = 100;
+    tempy = 100;
     
-    x[0] = 300;
-    y[0] = 200;
-    
-    x[1] = 500;
-    y[1] = 200;
-    
-    x[2] = 700;
-    y[2] = 200;
-    
+    int i = 0;
+    while (i < n) {
+      x[i] = tempx;
+      y[i] = tempy;
+      tempx = tempx + 100;
+     if (tempx == width) {
+       tempx = 100;
+       tempy = tempy + 100;
+      }
+      i = i + 1;
   }
-
+}
 
   void draw() {
 
