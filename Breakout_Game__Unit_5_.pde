@@ -69,6 +69,7 @@ void setup() {
     n = 28;
     x = new int[n];
     y = new int[n];
+    alive = new boolean[n];
     tempx = 100;
     tempy = 100;
     
@@ -76,6 +77,7 @@ void setup() {
     while (i < n) {
       x[i] = tempx;
       y[i] = tempy;
+      alive[i] = true;
       tempx = tempx + 100;
      if (tempx == width) {
        tempx = 100;
