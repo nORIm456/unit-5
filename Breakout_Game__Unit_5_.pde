@@ -4,6 +4,7 @@ final int INTRO = 0;
 final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER= 3;
+final int GAMEWIN = 4;
 //Color
 color red = #DE1919;
 color blue = #1944DE;
@@ -95,9 +96,12 @@ void setup() {
       game();
     } else if (mode == PAUSE) {
       pause();
+    } else if (mode == GAMEWIN) {
+      gameWin();
     } else if ( mode == GAMEOVER) {
       gameOver();
     } else {
       println("Error, mode is" + mode);
     }
+    px = constrain(px, 25, 975);
   }
