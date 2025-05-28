@@ -61,13 +61,13 @@ void setup() {
     bally = height/2;
     balld = 20;
 
-    vx = -2;
-    vy = 8;
+    vx = 20;
+    vy = 20;
     
     
     // set up array of bricks
     brickd = 50;
-    n = 28;
+    n = 36;
     x = new int[n];
     y = new int[n];
     alive = new boolean[n];
