@@ -1,6 +1,6 @@
 PImage[] gif;
 int numberOfFrames;
-
+int f;
 
 void setup() {
   
@@ -9,11 +9,17 @@ void setup() {
   
     int i = 0;
   while ( i < numberOfFrames ) {
-      gif[i] = loadImage('frame_
+      gif[i] = loadImage("frame_"+i+"_delay-0.03s.gif");
     i = i + 1;
  }
+ 
+ size(1000, 800, P2D);
+ 
 }
 
-void show() {
-  
+void draw() {
+  image(gif[f], 0, 0, width, height);
+  println(frameCount);
+  f = f + 1;
+  if (f == numberOfFrames) f = 0;
 }
