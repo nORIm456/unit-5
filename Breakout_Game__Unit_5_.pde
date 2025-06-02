@@ -41,11 +41,21 @@ int brickd;
 int n;
 int tempx, tempy;
 
+PImage[] gif;
+int numberOfFrames;
+int f;
 
 void setup() {
   size(1000, 800, P2D);
   
+    numberOfFrames = 59;
+  gif = new PImage[numberOfFrames];
   
+    int e = 0;
+  while ( e < numberOfFrames ) {
+      gif[e] = loadImage("frame_"+e+"_delay-0.03s.gif");
+    e = e + 1;
+ }
 
   px = 500;
   py = 700;
@@ -58,10 +68,10 @@ void setup() {
   //ball setup
  
     ballx = width/2;
-    bally = height/2;
+    bally = 500;
     balld = 20;
 
-    vx = 20;
+    vx = 0;
     vy = 20;
     
     
@@ -104,4 +114,5 @@ void setup() {
       println("Error, mode is" + mode);
     }
     px = constrain(px, 25, 975);
+    
   }
