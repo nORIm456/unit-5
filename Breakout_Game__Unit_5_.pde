@@ -50,7 +50,7 @@ void setup() {
   
     numberOfFrames = 59;
   gif = new PImage[numberOfFrames];
-  
+  //FINAL
     int e = 0;
   while ( e < numberOfFrames ) {
       gif[e] = loadImage("frame_"+e+"_delay-0.03s.gif");
